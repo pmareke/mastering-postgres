@@ -2,6 +2,8 @@
 
 ## Set up your environment
 
+> Note: This guide assumes you have Docker installed on your machine. If you don't have Docker installed, you can download it from [here](https://www.docker.com/products/docker-desktop).
+
 In order to have a PostgreSQL instance running, you can use the following Docker command:
 
 ```bash
