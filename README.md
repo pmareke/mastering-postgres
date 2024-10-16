@@ -20,3 +20,29 @@ In order to stop the database, you can use the following command:
 make down
 ```
 
+## Introduction
+
+TBD
+
+## Data Types
+
+## Advanced Data Types
+
+## Indexing
+
+## Advanced Indexing
+
+## Understanding Query Plans
+
+## Generating Results
+
+## Advance SQL
+
+## Full Text Search
+
+## JSON
+
+## Operating PostgreSQL
+
+## Popular Extensions
+
