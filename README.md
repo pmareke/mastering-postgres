@@ -10,10 +10,16 @@ In order to have a PostgreSQL instance running, you can use the following Docker
 make up
 ```
 
-Once you have the database running, you can connect to it using the following command:
+If you want to access the PostgreSQL instance, you can use the following command:
 
 ```bash
-PGPASSWORD=postgres psql -h localhost -U postgres
+make shell
+```
+
+To run any of the chapter scripts, you can use the following command:
+
+```bash
+make run chapter=CHAPTER # make run chapter=introduction
 ```
 
 In order to stop the database, you can use the following command:

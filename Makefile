@@ -7,7 +7,7 @@ help:  ## show this help.
 
 .PHONY: up
 up:
-	docker compose up postgres
+	docker compose up -d postgres
 
 .PHONY: down
 down: ## Stop and remove all the Docker services, volumes and networks
