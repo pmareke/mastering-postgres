@@ -19,4 +19,4 @@ shell: # Open a psql shell connection
 
 .PHONY: run
 run: ## Run the chapter script. ex: make run chapter=XXX
-	docker compose run --rm psql psql -h postgres -U postgres -d postgres -f ./exercises/$(chapter)/run.sql
+	docker compose run --rm psql psql -f ./exercises/$(chapter)/run.sql
