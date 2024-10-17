@@ -1,14 +1,17 @@
 services:
   psql:
     image: postgres
-    command: ["psql", "-h", "postgres", "-U", "postgres", "postgres"]
+    command: ["psql"]
+    environment:
+      PGPASSWORD: postgres
+      PGUSER: postgres
+      PGHOST: postgres
+      PGDATABASE: postgres
+    volumes:
+      - ./exercises:/exercises
     depends_on:
       postgres:
         condition: service_healthy
-    environment:
-      PGPASSWORD: postgres
-    volumes:
-      - ./exercises:/exercises
 
   postgres:
     image: postgres
@@ -21,7 +24,7 @@ services:
     volumes:
       - ./scripts/db/init.sql:/docker-entrypoint-initdb.d/init.sql
     healthcheck:
-      test: ["CMD", "pg_isready", "-q", "-d", "postgres", "-U", "postgres"]
+      test: ["CMD", "pg_isready", "-q"]
       interval: 5s
       timeout: 5s
       retries: 5
